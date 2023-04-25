@@ -23,7 +23,7 @@ public class Main extends Application {
 						 FXMLLoader loader = new FXMLLoader();
 						 	loader.setLocation(Main.class.getResource("../view/viewConnexion.fxml"));
 				            loader.setLocation(Main.class.getResource("../view/viewComptableListeFiches.fxml"));
-				    		//loader.setLocation(Main.class.getResource("../view/viewTest.fxml"));
+				    		loader.setLocation(Main.class.getResource("../view/viewTest.fxml"));
 
 				            rootLayout = (Pane) loader.load();
 				            

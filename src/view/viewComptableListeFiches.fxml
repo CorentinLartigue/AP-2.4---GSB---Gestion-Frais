@@ -17,9 +17,9 @@
             <Image url="@../../images/gsb.png" />
          </image>
       </ImageView>
-      <Button id="btnOuvrirFicheComptable" layoutX="670.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="52.0" prefWidth="308.0" text="Ouvrir fiche sélectionnée" textAlignment="CENTER">
+      <Button id="btnOuvrirFicheComptable" layoutX="716.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="30.0" prefWidth="179.0" text="Ouvrir fiche sélectionnée" textAlignment="CENTER">
          <font>
-            <Font size="25.0" />
+            <Font size="14.0" />
          </font>
       </Button>
       <Button id="closeButtonListeFichesComptable" fx:id="buttonCloseListeFichesComptable" layoutX="842.0" layoutY="413.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
@@ -35,13 +35,13 @@
             <TableColumn fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
         </columns>
       </TableView>
-      <Button id="validerButtonListeFichesComptable" layoutX="673.0" layoutY="413.0" mnemonicParsing="false" onAction="#buttonValiderFicheComptableClick" prefHeight="39.0" prefWidth="129.0" text="Valider">
+      <Button id="validerButtonListeFichesComptable" layoutX="676.0" layoutY="413.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Valider">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Button id="btnOuvrirFicheComptable" layoutX="676.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="52.0" prefWidth="295.0" text="Gestion des utilisateurs" textAlignment="CENTER">
+      <Button id="btnOuvrirFicheComptable" layoutX="716.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="30.0" prefWidth="179.0" text="Gestion des utilisateurs" textAlignment="CENTER">
          <font>
-            <Font size="25.0" />
+            <Font size="14.0" />
          </font>
       </Button>
    </children>
