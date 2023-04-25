@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paneId" prefHeight="552.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerGestionnaireListeFiches">
+<AnchorPane fx:id="paneId" prefHeight="552.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerGestionnaireListeFiches">
    <children>
       <Pane layoutX="96.0" layoutY="111.0" prefHeight="28.0" prefWidth="181.0" />
       <ImageView fitHeight="174.0" fitWidth="233.0" layoutX="701.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
@@ -22,7 +22,7 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <Button id="closeButtonListeFichesComptable" fx:id="buttonCloseListeFichesGestionnaire" layoutX="664.0" layoutY="367.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesGestionnaireClick" prefHeight="54.0" prefWidth="307.0" text="Quitter" textAlignment="CENTER">
+      <Button id="closeButtonListeFichesComptable" fx:id="buttonCloseListeFichesGestionnaire" layoutX="646.0" layoutY="438.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesGestionnaireClick" prefHeight="54.0" prefWidth="307.0" text="Quitter" textAlignment="CENTER">
          <font>
             <Font size="25.0" />
          </font>
@@ -35,5 +35,10 @@
             <TableColumn fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
         </columns>
       </TableView>
+      <Button id="btnOuvrirFicheComptable" layoutX="664.0" layoutY="343.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheGestionnaireClick" prefHeight="52.0" prefWidth="307.0" text="Gestion des utilisateurs" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

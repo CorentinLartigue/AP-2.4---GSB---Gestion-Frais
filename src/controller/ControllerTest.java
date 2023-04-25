@@ -15,7 +15,8 @@ public class ControllerTest {
 	
 	//Méthode appelée lors de l'initialisation du contrôleur.
 	public void initialize() {
-     		lblMessage.setText("Bonjour - Cliquez sur un bouton");			
+     		lblMessage.setText("Bonjour - Cliquez sur un bouton");
+     		
 	} 	
 
 	@FXML protected void onBtn1Clik(ActionEvent e) {
