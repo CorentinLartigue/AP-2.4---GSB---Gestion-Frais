@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneId" prefHeight="552.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerComptableListeFiches">
+   <children>
+      <Pane layoutX="-30.0" layoutY="-83.0" prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fitHeight="174.0" fitWidth="233.0" layoutX="701.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/gsb.png" />
+         </image>
+      </ImageView>
+      <Button id="btnOuvrirFicheComptable" layoutX="670.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="52.0" prefWidth="308.0" text="Ouvrir fiche sélectionnée" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button id="closeButtonListeFichesComptable" fx:id="buttonCloseListeFichesComptable" layoutX="842.0" layoutY="413.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableListeFichesComptable" layoutX="29.0" layoutY="65.0" prefHeight="400.0" prefWidth="575.0">
+        <columns>
+          <TableColumn fx:id="colIdFiche" prefWidth="75.0" text="Code" />
+          <TableColumn fx:id="colNomVisiteur" prefWidth="172.0" text="Visiteur" />
+            <TableColumn fx:id="colMoisFiche" editable="false" prefWidth="153.0" sortable="false" text="Mois" />
+            <TableColumn fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
+        </columns>
+      </TableView>
+      <Button id="validerButtonListeFichesComptable" layoutX="673.0" layoutY="413.0" mnemonicParsing="false" onAction="#buttonValiderFicheComptableClick" prefHeight="39.0" prefWidth="129.0" text="Valider">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button id="btnOuvrirFicheComptable" layoutX="676.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="52.0" prefWidth="295.0" text="Gestion des utilisateurs" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
