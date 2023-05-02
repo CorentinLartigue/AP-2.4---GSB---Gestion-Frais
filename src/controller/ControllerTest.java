@@ -29,9 +29,16 @@ public class ControllerTest {
 	
 	//Méthode appelée lors de l'initialisation du contrôleur.
 	public void initialize() {
+<<<<<<< HEAD
 		lblMessage.setText("Bonjour - Cliquez sur un bouton");
 	} 
 	
+=======
+     		lblMessage.setText("Bonjour - Cliquez sur un bouton");
+     		
+	} 	
+
+>>>>>>> 56bac8cc5ce61431ebd73e5700b4b658fc075b01
 	@FXML protected void onBtn1Clik(ActionEvent e) {
 		ResultSet rs = DBConnex.getRS("select nom as nomUtilisateurs from utilisateur where statut='comptable'", DBConnex.connexion() ); 
 		ResultSet rs1 = DBConnex.getRS("select prenom as prenomUtilisateurs  from utilisateur where statut='comptable'", DBConnex.connexion() ); 
