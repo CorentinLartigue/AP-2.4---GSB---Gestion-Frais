@@ -1,17 +1,23 @@
 package controller;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.DAO.FicheFraisDAO;
 import model.DAO.UtilisateurDAO;
@@ -30,7 +36,9 @@ public class ControllerGestionnaireListeFiches{
 	 @FXML 	private TableColumn<FicheFrais , String > colNomVisiteur;
 	 @FXML 	private TableColumn<FicheFrais , Integer > colMoisFiche;
 	 @FXML  private TableColumn<FicheFrais , String > colEtatFiche;
-	 @FXML  private Button buttonCloseListeFichesGestionnaire;
+	 @FXML  private Button btnOuvrirFicheGestionComptable;
+	 @FXML  private Button btnOuvrirFicheComptable;
+	 @FXML  private Button closeButtonListeFichesComptable;
 	 
 	
 	 
@@ -64,6 +72,21 @@ public class ControllerGestionnaireListeFiches{
 				 		
 		}
 	 
+		@FXML private void btnOuvrirFicheGestionComptableClick(ActionEvent e) throws IOException
+		{
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(getClass().getResource("../view/viewGestionComptable.fxml"));
+			Pane gestionnaireFicheLayout = (Pane) loader.load();
+			
+			Scene gestionnaireListeFichesScene = new Scene(gestionnaireFicheLayout);
+        	Stage gestionnaireListeFichesStage = new Stage();
+	 		gestionnaireListeFichesStage.setScene(gestionnaireListeFichesScene);
+       		
+	 		gestionnaireListeFichesStage.setTitle("GSB Gestion des frais - Comptable Fiches de frais");
+	 		gestionnaireListeFichesStage.initModality(Modality.APPLICATION_MODAL);		 		
+	 		gestionnaireListeFichesStage.show();
+			
+		}
 	 
 			
 	 /**
@@ -93,6 +116,7 @@ public class ControllerGestionnaireListeFiches{
 							lesLignesFrais.add(uneLigneFrais);
 						}
 					}
+					
 					uneFicheFrais.setLesLignes(lesLignesFrais); 				 
 					data.add(uneFicheFrais);
 				}
@@ -121,9 +145,9 @@ public class ControllerGestionnaireListeFiches{
 	  * Fermeture de la vue
 	  * @param e
 	  */
-	 public void buttonCloseListeFichesGestionnaireClick(ActionEvent e) {
+	 public void buttonCloseListeFichesComptableClick(ActionEvent e) {
 			
-		 Stage stage = (Stage) buttonCloseListeFichesGestionnaire.getScene().getWindow();
+		 Stage stage = (Stage) closeButtonListeFichesComptable.getScene().getWindow();
 	     stage.close();
 	 }
 	
@@ -136,7 +160,7 @@ public class ControllerGestionnaireListeFiches{
 	  */
 	 public void initialize() {
 		     	 
-		 remplissagetableViewListeFichesGestionnaire(); 
+		 //remplissagetableViewListeFichesGestionnaire(); 
 			
 
 			

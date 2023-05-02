@@ -17,27 +17,27 @@
             <Image url="@../../images/gsb.png" />
          </image>
       </ImageView>
-      <Button id="btnOuvrirFicheComptable" layoutX="664.0" layoutY="249.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheGestionnaireClick" text="Ouvrir fiche sélectionnée" textAlignment="CENTER">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Button>
-      <Button id="closeButtonListeFichesComptable" fx:id="buttonCloseListeFichesGestionnaire" layoutX="646.0" layoutY="438.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesGestionnaireClick" prefHeight="54.0" prefWidth="307.0" text="Quitter" textAlignment="CENTER">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Button>
       <TableView fx:id="tableListeFichesGestionnaire" layoutX="29.0" layoutY="65.0" prefHeight="400.0" prefWidth="575.0">
         <columns>
-          <TableColumn fx:id="colIdFiche" prefWidth="75.0" text="Code" />
-          <TableColumn fx:id="colNomVisiteur" prefWidth="172.0" text="Visiteur" />
-            <TableColumn fx:id="colMoisFiche" editable="false" prefWidth="153.0" sortable="false" text="Mois" />
-            <TableColumn fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
+          <TableColumn id="colIdFiche" fx:id="colIdFiche" prefWidth="75.0" text="Code" />
+          <TableColumn id="colNomVisiteur" fx:id="colNomVisiteur" prefWidth="172.0" text="Visiteur" />
+            <TableColumn id="colMoisFiche" fx:id="colMoisFiche" editable="false" prefWidth="153.0" sortable="false" text="Mois" />
+            <TableColumn id="colEtatFiche" fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
         </columns>
       </TableView>
-      <Button id="btnOuvrirFicheComptable" layoutX="664.0" layoutY="343.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheGestionnaireClick" prefHeight="52.0" prefWidth="307.0" text="Gestion des utilisateurs" textAlignment="CENTER">
+      <Button id="btnOuvrirFicheComptable" layoutX="719.0" layoutY="246.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="179.0" text="Ouvrir fiche sélectionnée" textAlignment="CENTER">
          <font>
-            <Font size="25.0" />
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="btnOuvrirFicheGestionComptable" layoutX="719.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnOuvrirFicheGestionComptableClick" prefHeight="30.0" prefWidth="179.0" text="Gestion des comptables" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="closeButtonListeFichesComptable" layoutX="748.0" layoutY="426.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
          </font>
       </Button>
    </children>
