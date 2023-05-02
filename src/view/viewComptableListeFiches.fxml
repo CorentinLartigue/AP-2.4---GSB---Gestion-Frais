@@ -22,24 +22,20 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button id="closeButtonListeFichesComptable" fx:id="buttonCloseListeFichesComptable" layoutX="842.0" layoutY="413.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
+      <Button id="closeButtonListeFichesComptable" layoutX="737.0" layoutY="407.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tableListeFichesComptable" layoutX="29.0" layoutY="65.0" prefHeight="400.0" prefWidth="575.0">
+      <TableView id="tableListeFichesComptable" fx:id="tableListeFichesComptable" layoutX="29.0" layoutY="65.0" prefHeight="400.0" prefWidth="575.0">
         <columns>
-          <TableColumn fx:id="colIdFiche" prefWidth="75.0" text="Code" />
-          <TableColumn fx:id="colNomVisiteur" prefWidth="172.0" text="Visiteur" />
-            <TableColumn fx:id="colMoisFiche" editable="false" prefWidth="153.0" sortable="false" text="Mois" />
-            <TableColumn fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
+          <TableColumn id="colIdFiche" prefWidth="75.0" text="Code" />
+          <TableColumn id="colNomVisiteur" fx:id="colNomVisiteur" prefWidth="172.0" text="Visiteur" />
+            <TableColumn id="colMoisFiche" fx:id="colMoisFiche" editable="false" prefWidth="153.0" sortable="false" text="Mois" />
+            <TableColumn id="colEtatFiche" fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
         </columns>
       </TableView>
-      <Button id="validerButtonListeFichesComptable" layoutX="676.0" layoutY="413.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Valider">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-      <Button id="btnOuvrirFicheComptable" layoutX="716.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="30.0" prefWidth="179.0" text="Gestion des utilisateurs" textAlignment="CENTER">
+      <Button id="btnGestionVisiteurs" layoutX="716.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnGestionVisiteursClick" prefHeight="30.0" prefWidth="179.0" text="Gestion des visiteurs" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>

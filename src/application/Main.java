@@ -15,16 +15,11 @@ public class Main extends Application {
 		 */
 		public void start(Stage primaryStage) {
 			
-			 
-			
 					try {
 								
 						
 						 FXMLLoader loader = new FXMLLoader();
 						 	loader.setLocation(Main.class.getResource("../view/viewConnexion.fxml"));
-				            loader.setLocation(Main.class.getResource("../view/viewComptableListeFiches.fxml"));
-				    		loader.setLocation(Main.class.getResource("../view/viewTest.fxml"));
-
 				            rootLayout = (Pane) loader.load();
 				            
 				            Scene scene = new Scene(rootLayout);
