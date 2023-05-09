@@ -38,7 +38,7 @@ public class ControllerComptableListeFiches{
 	 @FXML 	private TableColumn<FicheFrais , Integer > colMoisFiche;
 	 @FXML  private TableColumn<FicheFrais , String > colEtatFiche;
 	 @FXML  private Button btnOuvrirFicheComptable;
-	 @FXML  private Button closeButtonListeFichesComptable;
+	 @FXML  private Button buttonCloseListeFichesComptable;
 	 @FXML  private Button validerButtonListeFichesComptable;
 	 @FXML  private Button btnGestionVisiteurs;
 	 
@@ -81,11 +81,11 @@ public class ControllerComptableListeFiches{
 	  */
 	 private void remplissagetableViewListeFichesComptable() {
 		 try {
-			 			 
-			ResultSet rsListeFiches = FicheFraisDAO.lesFichesFrais();
 			 
+			ResultSet rsListeFiches = FicheFraisDAO.lesFichesFrais(); 
+			
 			if(rsListeFiches!= null) {
-					
+
 				ArrayList<LigneFrais> lesLignesFrais;
 				rsListeFiches.beforeFirst();
 				
@@ -99,13 +99,15 @@ public class ControllerComptableListeFiches{
 					if(rsLesLignes != null){		
 						rsLesLignes.beforeFirst();
 						while (rsLesLignes.next()) {
-							LigneFrais uneLigneFrais = new LigneFrais(rsLesLignes.getInt(1),rsLesLignes.getString(2) ,rsLesLignes.getInt(3), rsLesLignes.getString(5), rsLesLignes.getFloat(6),rsLesLignes.getInt(4));								lesLignesFrais.add(uneLigneFrais);
+							LigneFrais uneLigneFrais = new LigneFrais(rsLesLignes.getInt(1),rsLesLignes.getString(2) ,rsLesLignes.getInt(3), rsLesLignes.getString(5), rsLesLignes.getFloat(6),rsLesLignes.getInt(4));								
+							lesLignesFrais.add(uneLigneFrais);
 						}
 					}
 					uneFicheFrais.setLesLignes(lesLignesFrais); 				 
 					data.add(uneFicheFrais);
 				}
 			}
+			
 			
 		 }
 		 catch (Exception e) {
@@ -129,8 +131,8 @@ public class ControllerComptableListeFiches{
 	  * @param e
 	  */
 	 public void buttonCloseListeFichesComptableClick(ActionEvent e) {
-			
-		 Stage stage = (Stage) closeButtonListeFichesComptable.getScene().getWindow();
+		
+		 Stage stage = (Stage) buttonCloseListeFichesComptable.getScene().getWindow();
 		 stage.close();
 	 }
 	
@@ -143,14 +145,15 @@ public class ControllerComptableListeFiches{
 	  */
 	 public void initialize() {
 		     	 
-			//remplissagetableViewListeFichesComptable(); 
+		
+		 remplissagetableViewListeFichesComptable(); 
 			
 	 } 
 	 
 	 @FXML	private void btnGestionVisiteursClick(ActionEvent e) throws IOException {
-		 FXMLLoader loader = new FXMLLoader();
-		 loader.setLocation(getClass().getResource("../view/viewGestionVisiteur.fxml"));
-		 	Pane comptableGestionVisiteursLayout = (Pane) loader.load(); 		
+		 	FXMLLoader loader = new FXMLLoader();
+		 	loader.setLocation(getClass().getResource("../view/viewGestionVisiteur.fxml"));
+		 	Pane comptableGestionVisiteursLayout = (Pane) loader.load();
 	 		Scene comptableGestionVisiteursScene = new Scene(comptableGestionVisiteursLayout);
         	Stage comptableGestionVisiteursStage = new Stage();
         	comptableGestionVisiteursStage.setScene(comptableGestionVisiteursScene);
