@@ -22,14 +22,14 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button id="closeButtonListeFichesComptable" layoutX="737.0" layoutY="407.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
+      <Button fx:id="buttonCloseListeFichesComptable" layoutX="737.0" layoutY="407.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
       <TableView id="tableListeFichesComptable" fx:id="tableListeFichesComptable" layoutX="29.0" layoutY="65.0" prefHeight="400.0" prefWidth="575.0">
         <columns>
-          <TableColumn id="colIdFiche" prefWidth="75.0" text="Code" />
+          <TableColumn id="colIdFiche" fx:id="colIdFiche" prefWidth="75.0" text="Code" />
           <TableColumn id="colNomVisiteur" fx:id="colNomVisiteur" prefWidth="172.0" text="Visiteur" />
             <TableColumn id="colMoisFiche" fx:id="colMoisFiche" editable="false" prefWidth="153.0" sortable="false" text="Mois" />
             <TableColumn id="colEtatFiche" fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
