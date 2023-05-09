@@ -35,7 +35,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button id="closeButtonListeFichesComptable" layoutX="748.0" layoutY="426.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
+      <Button fx:id="buttonCloseListeFichesComptable" layoutX="748.0" layoutY="426.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>

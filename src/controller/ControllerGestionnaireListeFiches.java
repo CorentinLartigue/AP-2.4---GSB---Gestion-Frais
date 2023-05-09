@@ -38,7 +38,8 @@ public class ControllerGestionnaireListeFiches{
 	 @FXML  private TableColumn<FicheFrais , String > colEtatFiche;
 	 @FXML  private Button btnOuvrirFicheGestionComptable;
 	 @FXML  private Button btnOuvrirFicheComptable;
-	 @FXML  private Button closeButtonListeFichesComptable;
+	 @FXML  private Button buttonCloseListeFichesComptable;
+	 
 	 
 	
 	 
@@ -147,7 +148,7 @@ public class ControllerGestionnaireListeFiches{
 	  */
 	 public void buttonCloseListeFichesComptableClick(ActionEvent e) {
 			
-		 Stage stage = (Stage) closeButtonListeFichesComptable.getScene().getWindow();
+		 Stage stage = (Stage) buttonCloseListeFichesComptable.getScene().getWindow();
 	     stage.close();
 	 }
 	
@@ -160,7 +161,7 @@ public class ControllerGestionnaireListeFiches{
 	  */
 	 public void initialize() {
 		     	 
-		 //remplissagetableViewListeFichesGestionnaire(); 
+		 remplissagetableViewListeFichesGestionnaire(); 
 			
 
 			
