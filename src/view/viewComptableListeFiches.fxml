@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneId" prefHeight="552.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerComptableListeFiches">
+   <children>
+      <Pane layoutX="-30.0" layoutY="-83.0" prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fitHeight="174.0" fitWidth="233.0" layoutX="701.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/gsb.png" />
+         </image>
+      </ImageView>
+      <Button id="btnOuvrirFicheComptable" layoutX="716.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="30.0" prefWidth="179.0" text="Ouvrir fiche sélectionnée" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonCloseListeFichesComptable" layoutX="737.0" layoutY="407.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonCloseListeFichesComptableClick" prefHeight="33.0" prefWidth="121.0" text="Quitter" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView id="tableListeFichesComptable" fx:id="tableListeFichesComptable" layoutX="29.0" layoutY="65.0" prefHeight="400.0" prefWidth="575.0">
+        <columns>
+          <TableColumn id="colIdFiche" fx:id="colIdFiche" prefWidth="75.0" text="Code" />
+          <TableColumn id="colNomVisiteur" fx:id="colNomVisiteur" prefWidth="172.0" text="Visiteur" />
+            <TableColumn id="colMoisFiche" fx:id="colMoisFiche" editable="false" prefWidth="153.0" sortable="false" text="Mois" />
+            <TableColumn id="colEtatFiche" fx:id="colEtatFiche" prefWidth="174.0" text="Etat" />
+        </columns>
+      </TableView>
+      <Button id="btnGestionVisiteurs" layoutX="716.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnGestionVisiteursClick" prefHeight="30.0" prefWidth="179.0" text="Gestion des visiteurs" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
