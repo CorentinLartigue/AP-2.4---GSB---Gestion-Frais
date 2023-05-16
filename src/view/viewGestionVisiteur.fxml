@@ -19,12 +19,12 @@
             <Image url="@../../images/gsb.png" />
          </image>
       </ImageView>
-      <Button id="btnEnregistrer" layoutX="623.0" layoutY="397.0" mnemonicParsing="false"  prefHeight="38.0" prefWidth="112.0" text="Enregistrer" textAlignment="CENTER">
+      <Button id="btnEnregistrer" layoutX="623.0" layoutY="397.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="112.0" text="Enregistrer" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button id="btnSupprimer" layoutX="784.0" layoutY="397.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false"  prefHeight="39.0" prefWidth="112.0" text="Supprimer" textAlignment="CENTER">
+      <Button id="btnSupprimer" layoutX="784.0" layoutY="397.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="39.0" prefWidth="112.0" text="Supprimer" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
@@ -50,7 +50,7 @@
       <TextField id="tfAdresse" layoutX="697.0" layoutY="226.0" promptText="Adresse" />
       <TextField id="tfCP" layoutX="697.0" layoutY="264.0" promptText="CP" />
       <TextField id="tfDateEmbauche" layoutX="697.0" layoutY="340.0" promptText="Date Embauche" />
-      <Button id="btnEnregistrer" layoutX="715.0" layoutY="457.0" mnemonicParsing="false" onAction="#buttonOuvrirFicheComptableClick" prefHeight="38.0" prefWidth="112.0" text="Modifier" textAlignment="CENTER">
+      <Button id="btnModifier" layoutX="619.0" layoutY="458.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="112.0" text="Modifier" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
@@ -61,5 +61,10 @@
       <Label layoutX="667.0" layoutY="268.0" text="CP:" />
       <Label layoutX="662.0" layoutY="306.0" text="Ville:" />
       <Label layoutX="601.0" layoutY="344.0" text="Date embauche:" />
+      <Button id="btnQuitter" layoutX="784.0" layoutY="458.0" mnemonicParsing="false" onAction="#btnQuitterClick" prefHeight="38.0" prefWidth="112.0" text="Quitter" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 public class UtilisateurDAO {
 	
 	/**
-	 * Métode permettant de récupérer les informations relatives à un utilisateur
+	 * Mï¿½tode permettant de rï¿½cupï¿½rer les informations relatives ï¿½ un utilisateur
 	 * @param id (id utilidsateur)
 	 * @return ResultSet
 	 */
@@ -18,4 +18,15 @@ public class UtilisateurDAO {
  		
  			
      }
+	
+	public static ResultSet lesVisiteurs(String statut)
+    {
+		 	 
+	     String requete = "SELECT *  FROM utilisateur where  statut = '" + statut + "'";
+                
+        return DBConnex.getRS(requete, DBConnex.connexion());
+		
+			
+    }
+	
 }

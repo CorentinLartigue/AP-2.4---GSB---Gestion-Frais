@@ -150,15 +150,17 @@ public class ControllerComptableListeFiches{
 			
 	 } 
 	 
-	 @FXML	private void btnGestionVisiteursClick(ActionEvent e) throws IOException {
+	 @FXML	private void btnGestionVisiteursClick(ActionEvent e) throws IOException 
+	 {
 		 	FXMLLoader loader = new FXMLLoader();
 		 	loader.setLocation(getClass().getResource("../view/viewGestionVisiteur.fxml"));
 		 	Pane comptableGestionVisiteursLayout = (Pane) loader.load();
+		 	
 	 		Scene comptableGestionVisiteursScene = new Scene(comptableGestionVisiteursLayout);
         	Stage comptableGestionVisiteursStage = new Stage();
         	comptableGestionVisiteursStage.setScene(comptableGestionVisiteursScene);
        		
-        	comptableGestionVisiteursStage.setTitle("GSB Gestion des frais - GV");
+        	comptableGestionVisiteursStage.setTitle("GSB Gestion des frais");
         	comptableGestionVisiteursStage.initModality(Modality.APPLICATION_MODAL);		 		
         	comptableGestionVisiteursStage.show();
 		 
