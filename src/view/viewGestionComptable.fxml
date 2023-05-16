@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="1099.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="1099.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerGestionComptable">
    <children>
       <ImageView fitHeight="101.0" fitWidth="158.0" layoutX="911.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,14 +22,14 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TableView layoutX="35.0" layoutY="131.0" prefHeight="327.0" prefWidth="472.0">
+      <TableView id="tableauListeFichesComptable" layoutX="35.0" layoutY="131.0" prefHeight="327.0" prefWidth="472.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Nom" />
-            <TableColumn prefWidth="75.0" text="Prénom" />
-            <TableColumn prefWidth="75.0" text="Adresse" />
-            <TableColumn prefWidth="75.0" text="cp" />
-            <TableColumn prefWidth="75.0" text="Ville" />
-            <TableColumn prefWidth="94.0" text="DateEmbauche" />
+          <TableColumn id="colNomFiche" prefWidth="75.0" text="Nom" />
+            <TableColumn id="colPrenomFiche" prefWidth="75.0" text="Prénom" />
+            <TableColumn id="colAdresseFiche" prefWidth="75.0" text="Adresse" />
+            <TableColumn id="colCPFiche" prefWidth="75.0" text="cp" />
+            <TableColumn id="colVilleFiche" prefWidth="75.0" text="Ville" />
+            <TableColumn id="colDateEmbaucheFiche" prefWidth="94.0" text="DateEmbauche" />
         </columns>
       </TableView>
       <Button id="BtnModifier" layoutX="677.0" layoutY="409.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="187.0" text="Modifier" />
@@ -48,5 +47,6 @@
       <Label layoutX="586.0" layoutY="222.0" text="Code Postal:" />
       <Label layoutX="586.0" layoutY="254.0" text="Ville:" />
       <Label layoutX="586.0" layoutY="286.0" text="Date Embauche:" />
+      <Button fx:id="BtnQuitter" layoutX="677.0" layoutY="467.0" mnemonicParsing="false" onAction="#BtnQuitterClick" prefHeight="43.0" prefWidth="187.0" text="Quitter" />
    </children>
 </Pane>
